@@ -1,0 +1,266 @@
+/* Variáveis de Cores */
+:root {
+    --primary-color: #007bff; /* Azul claro para botões e destaques */
+    --secondary-color: #6c757d; /* Cinza para textos secundários */
+    --light-bg: #f8f9fa; /* Fundo muito claro */
+    --white-text: #ffffff; /* Texto branco */
+    --dark-text: #343a40; /* Texto escuro */
+    --border-color: #dee2e6; /* Cor da borda */
+    --card-bg: #ffffff; /* Fundo dos cards */
+}
+
+/* Reset Básico e Fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: var(--white-text);
+    color: var(--dark-text);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: var(--dark-text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-text);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Um tom um pouco mais escuro de azul */
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-text);
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.btn-small:hover {
+    background-color: #0056b3;
+}
+
+/* Seções */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #e0f7fa, #bbdefb); /* Gradiente de azul claro */
+    color: var(--dark-text);
+    padding: 100px 0;
+}
+
+.hero-section h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-text);
+}
+
+.hero-section p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Jogos Section */
+.jogos-section {
+    background-color: var(--light-bg);
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.game-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.game-card h3 {
+    font-size: 1.8rem;
+    margin: 15px 15px 10px;
+    color: var(--primary-color);
+}
+
+.game-card p {
+    font-size: 1rem;
+    margin: 0 15px 20px;
+    flex-grow: 1;
+    color: var(--secondary-color);
+}
+
+.game-card .btn-small {
+    align-self: flex-start;
+    margin: 0 15px 15px;
+}
+
+/* Notícias Section */
+.noticias-section {
+    background-color: var(--white-text);
+    border-top: 1px solid var(--border-color);
+}
+
+.noticia-card {
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    transition: box-shadow 0.3s ease;
+}
+
+.noticia-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.noticia-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--dark-text);
+}
+
+.noticia-card p {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.noticia-card span {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    display: block;
+    text-align: right;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-text);
+    color: var(--white-text);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+}
